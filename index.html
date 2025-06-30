@@ -131,7 +131,7 @@
     .side-nav {
       position: fixed;
       top: 50%;
-      left: 30px;
+      left: 20px;
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
@@ -142,13 +142,14 @@
     .side-nav a {
       color: var(--glow);
       background: rgba(56, 189, 248, 0.1);
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 0.9rem;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 500;
       transition: 0.3s ease;
       box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
       text-align: center;
+      font-size: 0.9rem;
     }
 
     .side-nav a:hover {
@@ -176,36 +177,45 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* Responsive - Mobile */
+    /* Responsive */
     @media (max-width: 768px) {
       .side-nav {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-        background-color: rgba(10, 15, 60, 0.9);
-        padding: 0.5rem;
-        gap: 0.8rem;
+        left: 10px;
+        gap: 0.7rem;
       }
 
       .side-nav a {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.85rem;
-      }
-
-      .side-nav hr {
-        display: none;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
       }
 
       h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
       }
 
       .card {
-        padding: 1.5rem;
+        padding: 1.2rem;
+      }
+
+      .card h2 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
       }
     }
   </style>
