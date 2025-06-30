@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Melly Nia Ramadhan | Technical Consultant & Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a0f3c;
+      --glow: #38bdf8;
+      --light: #f1f5f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      color: white;
+      background: linear-gradient(270deg, #0a0f3c, #1e293b, #0a0f3c);
+      background-size: 600% 600%;
+      animation: backgroundFlow 20s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 960px;
+      padding: 2rem;
+    }
+
+    @keyframes backgroundFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 2s ease;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--glow);
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+      animation: pulse 3s infinite;
+      transition: 0.4s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.08) rotate(2deg);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.8);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: var(--glow);
+      text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--light);
+      margin-top: 0.3rem;
+      letter-spacing: 1px;
+      animation: fadeIn 3s ease;
+    }
+
+    section {
+      width: 100%;
+      padding: 2rem;
+      animation: fadeInUp 2s ease;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      color: var(--glow);
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: var(--light);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      animation: fadeIn 3s ease;
+    }
+
+    /* Side Navigation */
+    .side-nav {
+      position: fixed;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+    }
+
+    .side-nav a {
+      color: var(--glow);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+      text-align: center;
+    }
+
+    .side-nav a:hover {
+      background-color: var(--glow);
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    }
+
+    .side-nav hr {
+      border: none;
+      height: 1px;
+      background-color: rgba(56, 189, 248, 0.4);
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .side-nav {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Side Navigation -->
+    <nav class="side-nav">
+      <a href="#about">About Me</a>
+      <a href="#experience">Experience</a>
+      <hr />
+      <a href="https://www.linkedin.com/in/melly-nia-ramadhan-08a584250/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/mellynibiru/" target="_blank">Instagram</a>
+      <a href="mailto:mellyniaramadhan762@gmail.com">Email</a>
+    </nav>
+
+    <header>
+      <img src="img/profilephoto.jpeg" alt="Melly's Photo" class="profile-img" />
+      <h1>Melly Nia Ramadhan</h1>
+      <p class="subtitle">Technical Consultant & Web Developer</p>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>
+          I'm Melly, a passionate developer who started my journey in web development in November 2022
+          and transitioned into a technical consultant role in June 2024.
+        </p>
+        <p>
+          I specialize in PHP Laravel and MySQL database processing, with strong skills in website development
+          and data analysis. I’m known for my quick learning ability, motivation, and dedication to professional growth.
+        </p>
+        <p>
+          With strong communication skills and critical thinking, I thrive in collaborative environments. I'm currently focusing on mastering
+          Python with Django and sharpening my SQL skills to excel further as a technical consultant.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="card">
+        <h2>Experience</h2>
+        
+        <p><strong>Freelance Web Developer — Desa Ringin Jaya Project</strong> — <em>Nov 2020 - Feb 2021</em><br/>
+          Developed a website for <strong>Desa Ringin Jaya</strong> to help the local community establish an online presence.
+          I worked on full-stack development using <strong>HTML, CSS, PHP,</strong> and <strong>MySQL</strong>, focusing on user-friendly interfaces
+          and dynamic content management for administrators.
+        </p>
+
+        <p><strong>Full Stack Developer (Freelance) — PT. Lingkar Kreasi (Circle Creative)</strong> — <em>Nov 2023 - Apr 2024</em><br/>
+          Built and tested a <strong>REST API</strong> using <strong>Laravel</strong> for backend development. Ensured robust API performance with
+          extensive testing via <strong>Postman</strong>, delivering production-ready solutions for frontend and mobile teams.
+        </p>
+
+        <p><strong>Technical Consultant — PT. Trees Solutions</strong> — <em>Jun 2024 - Present</em><br/>
+          Currently working as a Technical Consultant handling enterprise solutions with <strong>Oracle Fusion</strong> and <strong>HR applications</strong>.
+          Responsible for developing <strong>custom reports and payroll reports using Django</strong>, performing backend bug fixes for <strong>HARPA</strong>,
+          API testing, and collaborating on <strong>Reports, Forms, Personalizations, Interfaces, and Data Conversion Scripts</strong> using <strong>Oracle tools</strong> and <strong>Python</strong>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Melly Nia Ramadhan 🌟
+    </footer>
+  </div>
+</body>
+</html>
