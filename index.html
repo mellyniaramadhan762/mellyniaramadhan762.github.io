@@ -158,7 +158,7 @@
       justify-content: center;
       margin: 2rem 0;
       flex-wrap: wrap;
-      padding: 0 16px; /* ✅ Tambahkan padding kiri-kanan */
+      padding: 0 16px;
     }
 
     .step {
@@ -222,43 +222,23 @@
       to { opacity: 1; transform: translateY(0);}
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .header-nav {
-        gap: 0.5rem;
+    /* Responsive Mobile */
+    @media (max-width: 480px) {
+      .stepper {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 4px;
+        justify-content: start;
+        padding: 0 4px;
       }
 
-      .header-nav a {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.75rem;
+      .step {
+        padding: 0 4px;
       }
 
-      h1 {
-        font-size: 2rem;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-
-      .profile-img {
-        width: 100px;
-        height: 100px;
-      }
-
-      .card {
-        padding: 1rem;
-      }
-
-      .card h2 {
-        font-size: 1.4rem;
-      }
-
-      .card p {
-        font-size: 0.9rem;
-      }
-
-      footer {
+      .step .circle {
+        width: 26px;
+        height: 26px;
         font-size: 0.75rem;
       }
 
@@ -267,14 +247,50 @@
         font-size: 0.65rem;
       }
 
-      .step .circle {
-        width: 28px;
-        height: 28px;
-        font-size: 0.8rem;
+      .line {
+        min-width: 16px;
+        margin: 0 4px;
       }
 
-      .line {
-        min-width: 20px;
+      .stepper::-webkit-scrollbar {
+        display: none;
+      }
+      .stepper {
+        scrollbar-width: none;
+      }
+
+      .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+
+      .profile-img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .card {
+        padding: 0.8rem;
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+      }
+
+      .card p, .card ul li {
+        font-size: 0.85rem;
+      }
+
+      footer {
+        font-size: 0.7rem;
       }
     }
   </style>
