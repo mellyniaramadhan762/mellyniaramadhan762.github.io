@@ -227,13 +227,15 @@
       .stepper {
         flex-wrap: nowrap;
         overflow-x: auto;
-        gap: 4px;
+        gap: 8px;
         justify-content: start;
-        padding: 0 4px;
+        padding: 0 8px;
+        scroll-behavior: smooth;
       }
 
       .step {
         padding: 0 4px;
+        min-width: 80px;
       }
 
       .step .circle {
@@ -243,12 +245,13 @@
       }
 
       .step .label {
-        width: 60px;
+        width: auto;
         font-size: 0.65rem;
+        white-space: nowrap;
       }
 
       .line {
-        min-width: 16px;
+        min-width: 24px;
         margin: 0 4px;
       }
 
