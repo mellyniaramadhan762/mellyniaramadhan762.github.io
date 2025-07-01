@@ -171,8 +171,8 @@
     }
 
     .step .circle {
-      width: 32px;
-      height: 32px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background-color: #1e293b;
       border: 2px solid var(--glow);
@@ -181,15 +181,15 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
 
     .step .label {
       margin-top: 0.4rem;
       color: var(--light);
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       text-align: center;
-      width: 80px;
+      width: 65px;
     }
 
     .line {
@@ -222,7 +222,16 @@
       to { opacity: 1; transform: translateY(0);}
     }
 
-    /* Responsive Mobile */
+    /* Kecilkan tulisan Experience */
+    #experience .card h2 {
+      font-size: 1.4rem;
+    }
+
+    #experience .card p,
+    #experience .card ul li {
+      font-size: 0.8rem;
+    }
+
     @media (max-width: 480px) {
       .stepper {
         flex-wrap: nowrap;
@@ -236,18 +245,6 @@
       .step {
         padding: 0 4px;
         min-width: 80px;
-      }
-
-      .step .circle {
-        width: 26px;
-        height: 26px;
-        font-size: 0.75rem;
-      }
-
-      .step .label {
-        width: auto;
-        font-size: 0.65rem;
-        white-space: nowrap;
       }
 
       .line {
@@ -289,7 +286,7 @@
       }
 
       .card p, .card ul li {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
       }
 
       footer {
